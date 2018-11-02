@@ -10,8 +10,8 @@ Use this as a starter for your Ruby on Rails projects.
 - [x] Landing Page
 - [x] Login Page
 - [x] New User Registration Page
-- [] Pricing Page
-- [] User Dashboard with [Argon Dashboard](https://www.creative-tim.com/product/argon-dashboard)
+- [ ] Pricing Page
+- [ ] User Dashboard with [Argon Dashboard](https://www.creative-tim.com/product/argon-dashboard)
 
 ## License
 
