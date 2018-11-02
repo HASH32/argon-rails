@@ -84,13 +84,13 @@
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
                   <i class="ni ni-collection d-lg-none"></i>
-                  <span class="nav-link-inner--text">Pages (coming soon)</span>
+                  <span class="nav-link-inner--text">Pages</span>
                 </a>
                 <div class="dropdown-menu">
-                  <a href="#" class="dropdown-item">Pricing</a>
-                  <a href="#" class="dropdown-item">Profile</a>
-                  <a href="#" class="dropdown-item">Login</a>
-                  <a href="#" class="dropdown-item">Register</a>
+                  <%= link_to 'Pricing', pricing_pages_path, class: 'dropdown-item' %>
+                  <%= link_to 'Profile', profile_pages_path, class: 'dropdown-item' %>
+                  <%= link_to 'Login', new_user_session_path, class: 'dropdown-item' %>
+                  <%= link_to 'Register', new_user_registration_path, class: 'dropdown-item' %>
                 </div>
               </li>
             </ul>
@@ -113,14 +113,25 @@
                   <span class="nav-link-inner--text d-lg-none">GitLab</span>
                 </a>
               </li>
-              <li class="nav-item d-none d-lg-block ml-lg-4">
-                <%= link_to new_user_session_path, class: 'btn btn-neutral btn-icon' do %>
-                  <span class="btn-inner--icon">
-                    <i class="fa fa-user mr-2"></i>
-                  </span>
-                  <span class="nav-link-inner--text">Login</span>
-                <% end %>
-              </li>
+              <%- if !current_user %>
+                <li class="nav-item d-none d-lg-block ml-lg-4">
+                  <%= link_to new_user_session_path, class: 'btn btn-neutral btn-icon' do %>
+                    <span class="btn-inner--icon">
+                      <i class="fa fa-user mr-2"></i>
+                    </span>
+                    <span class="nav-link-inner--text">Login</span>
+                  <% end %>
+                </li>
+              <% else %>
+                <li class="nav-item d-none d-lg-block ml-lg-4">
+                  <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-info btn-icon' do %>
+                    <span class="btn-inner--icon">
+                      <i class="fa fa-sign-out mr-2"></i>
+                    </span>
+                    <span class="nav-link-inner--text">Sign Out</span>
+                  <% end %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>
@@ -137,7 +148,7 @@
             <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
             <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
           </div>
-          <div class="col-lg-6 text-lg-center btn-wrapper">
+          <div class="col-lg-6 text-lg-right btn-wrapper">
             <a target="_blank" href="https://twitter.com/hash32co" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Follow us">
               <i class="fa fa-twitter"></i>
             </a>
