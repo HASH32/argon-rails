@@ -2,9 +2,7 @@
 MIT License
 
 
-
 Copyright (c) 2018 Awin Abi
-
 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -15,10 +13,8 @@ copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
 
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -30,7 +26,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ----------------
-The Argon Design System, is goverened by the following licence:
+The Argon Design System, is distributed by the following licence:
 
 
 <p>MIT License</p>
